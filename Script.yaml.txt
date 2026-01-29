@@ -1,0 +1,14 @@
+---
+- name: Simple Ansible Playbook
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Create a test file
+      file:
+        path: /tmp/testfile.txt
+        state: touch
+
+    - name: Print a message
+      debug:
+        msg: "Hello Prashanth, Git + YAML working fine!"
